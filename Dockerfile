@@ -11,6 +11,7 @@ RUN tar -zxvf boost_1_74_0.tar.gz
 WORKDIR /build/boost_1_74_0/
 RUN ./bootstrap.sh
 RUN ./b2 install; exit 0
+RUN rm /build/ -Rf
 WORKDIR /build/
 RUN git clone https://github.com/seladb/PcapPlusPlus.git
 WORKDIR /build/PcapPlusPlus/
